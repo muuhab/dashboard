@@ -2,26 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --purple-main:#5542F6;
+    --purple-1:#E666E5;
+    --purple-2:#C8C2FC;
+    --purple-light-main: var(--light-fill-purple-main-purple, rgba(85, 66, 246, 0.10));
+
+    --blue-main:#0049C6;
+    --blue-1:#3E8CFF;
+
+    --red-main:#EE4540;
+    --red-1:#FA699D;
+    --red-3:#FC9FC0;
+    --red-4:#FFBEBE;
+
+    --green-main: #20C9AC;
+    --green-1: #14B13B;
+    --green-2: #5ED8C3;
+    --green-3: #94E5D8;
+
+    --yellow-main: #FFA15F;
+    --yellow-1: #FFDFC0;
+
+    --dark-main:#2E2C34;
+    --dark-1:#504F54;
+    --dark-2:#84818A;
+    --dark-3:#B6B4BA;
+    --dark-4:#E3E1E5;
+    --dark-5:#EBEAED;
+    --dark-6:#FBFAFC;
+
   }
+  
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-dark-6;
+}
+
+.regular-text-14 {
+  @apply text-dark-1 text-sm leading-5 font-semibold;
+}
+.regular-text-12 {
+  @apply text-dark-main text-xs leading-[18px] font-semibold;
 }
