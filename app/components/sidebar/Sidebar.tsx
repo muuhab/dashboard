@@ -4,7 +4,7 @@ import { FC } from 'react'
 import SidebarItem from './SidebarItem'
 import { Icons } from '../ui/Icons'
 import useRoutes from '@/app/hooks/useRoutes'
-import Button from '../ui/Button'
+import Button from '../Button'
 
 interface SidebarProps {
     children: React.ReactNode
@@ -34,16 +34,16 @@ const Sidebar: FC<SidebarProps> = ({ children }) => {
                 <nav className='flex flex-col pb-8 px-6 '>
                     <div className='border-t border-t-dark-5'>
                         <div className='flex flex-col gap-4 pt-6 pb-12'>
-                            <h3 className='regular-text-14'>
+                            <h3 className='regular-text-14-semibold'>
                                 Technical help
                             </h3>
-                            <h3 className='regular-text-14'>
+                            <h3 className='regular-text-14-semibold'>
                                 Contact us
                             </h3>
                         </div>
 
                         <div className='rounded-[4px] flex  flex-col gap-[14px] pt-4 pl-1 pb-12 bg-sidebar-shape bg-right  bg-cover   '>
-                            <h5 className='regular-text-12 max-w-[144px] '>
+                            <h5 className='regular-text-12-semibold max-w-[144px] '>
                                 Release you maximal potential software.
                             </h5>
                             <Button >

@@ -36,7 +36,7 @@ const SidebarItemItem: FC<SidebarItemItemProps> = ({ label, href, icon: Icon, ac
                         active && 'fill-purple-main'
                     )} />
                 </span>
-                <span className='regular-text-14'>
+                <span className='regular-text-14-semibold'>
                     {label}
                 </span>
             </Link>
