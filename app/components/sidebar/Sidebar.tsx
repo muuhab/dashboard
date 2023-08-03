@@ -54,7 +54,7 @@ const Sidebar: FC<SidebarProps> = ({ children }) => {
 
                 </nav>
             </aside>
-            <main className='pl-[250px] h-full'>
+            <main className='pl-[250px] h-full  '>
                 {children}
             </main>
         </div>

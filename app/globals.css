@@ -66,6 +66,9 @@
 
     --statsShape-1: var(--light-fill-dark-dark-6, rgba(251, 250, 252, 0.10));
     --statsShape-2: var(--light-fill-purple-main-purple, rgba(85, 66, 246, 0.10));
+
+    --box-shadow-input: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
   }
  
   .dark {

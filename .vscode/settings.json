@@ -4,7 +4,8 @@
         "clsx",
         "cust",
         "lucide",
-        "tailwindcss"
+        "tailwindcss",
+        "tanstack"
     ],
     "deepscan.ignoreConfirmWarning": true
 }

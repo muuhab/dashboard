@@ -27,9 +27,9 @@ const SidebarItemItem: FC<SidebarItemItemProps> = ({ label, href, icon: Icon, ac
     return <li
         className='cursor-pointer '
         onClick={handleClick}>
-        <div className='flex items-center justify-between hover:bg-purple-light-main group'>
+        <Link href={href} className='flex items-center justify-between hover:bg-purple-light-main group'>
 
-            <Link className='flex gap-4 items-center' href={href} >
+            <span className='flex gap-4 items-center'  >
                 <span className='py-3 pl-3'>
                     <Icon className={clsx(
                         'fill-dark-2 group-hover:fill-purple-main',
@@ -39,13 +39,13 @@ const SidebarItemItem: FC<SidebarItemItemProps> = ({ label, href, icon: Icon, ac
                 <span className='regular-text-14-semibold'>
                     {label}
                 </span>
-            </Link>
+            </span>
             {menu?.length && (
                 <span className='p-3'>
                     {toggleMenu ? <Icons.arrowUp /> : <Icons.arrowDown />}
                 </span>
             )}
-        </div>
+        </Link>
 
         {menu?.length && (
 
