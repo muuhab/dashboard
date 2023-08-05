@@ -7,31 +7,25 @@ import { Input } from '../ui/Input'
 import { Icons } from '../ui/Icons'
 import SelectSecondary from '../ui/Select/SelectSecondary'
 import ColorSelect from '../ui/Select/ColorSelect'
+import ViewSelect from '../ui/Select/ViewSelect'
 
 interface SubHeaderProps {
     title: string
     search?: string
     buttonTitle: string
     showView?: boolean
-    onClick?: () => void
+    onClick?: () => void,
+    children?: React.ReactNode
 }
 
-const SubHeader: FC<SubHeaderProps> = ({ title, showView, buttonTitle, search, onClick }) => {
+const SubHeader: FC<SubHeaderProps> = ({ title, showView, buttonTitle, search, onClick, children }) => {
     return <div className='flex justify-between items-center'>
         <h3 className='text-2xl font-semibold leading-[48px] text-dark-main'>
             {title}
         </h3>
         <div className="flex justify-center items-center gap-3">
             {showView &&
-                <ColorSelect
-                    items={[
-                        { name: '', value: 'list' },
-                        { name: '', value: 'grid' },
-                    ]}
-                    icon={<Icons.viewModule />}
-                    defaultSelected='list'
-
-                />
+                <ViewSelect defaultSelected='list' />
             }
             <div className='flex items-center justify-end shadow-box-shadow-input'>
 
@@ -47,11 +41,14 @@ const SubHeader: FC<SubHeaderProps> = ({ title, showView, buttonTitle, search, o
                     <Icons.search />
                 </Button>
             </div>
-
-            <Button className=' regular-text-14-semibold' onClick={onClick} >
-                <Plus className='w-4 h-4' />
-                {buttonTitle}
-            </Button>
+            {children ?
+                children
+                :
+                <Button className=' regular-text-14-semibold' onClick={onClick} >
+                    <Plus className='w-4 h-4' />
+                    {buttonTitle}
+                </Button>
+            }
         </div>
     </div>
 }
