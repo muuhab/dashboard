@@ -18,10 +18,10 @@ import { Plus } from 'lucide-react'
 import TagMain from '@/app/components/ui/TagMain'
 
 interface ProductInformationProps {
-
+    add?: boolean
 }
 
-const ProductInformation: FC<ProductInformationProps> = ({ }) => {
+const ProductInformation: FC<ProductInformationProps> = ({ add }) => {
     return <div className='flex gap-8'>
         <div className='pt-8 border-t border-dark-5 w-[726px]'>
             <h2 className='regular-text-18-semibold text-dark-main mb-6'>
@@ -126,21 +126,26 @@ const ProductInformation: FC<ProductInformationProps> = ({ }) => {
                         </NumberInputStepper>
                     </NumberInput>
                 </div>
-                <Card className='self-end'>
-                    <CardContent className='flex justify-evenly p-0 gap-4  '>
-                        <Button variant={'ghost'} size={'icon'}>
+                {add ? <Button className='bg-dark-main self-end'>
+                    <Plus className='w-4 h-4' />
+                    <span>Add</span>
+                </Button> :
+                    <Card className='self-end'>
+                        <CardContent className='flex justify-evenly p-0 gap-4  '>
+                            <Button variant={'ghost'} size={'icon'}>
 
-                            <Icons.edit className='fill-dark-3 w-5 h-5' />
-                        </Button>
-                        <div>
-                            <Divider orientation='vertical' className='bg-dark-3 w-[1px]' />
-                        </div>
-                        <Button variant={'ghost'} size={'icon'}>
+                                <Icons.edit className='fill-dark-3 w-5 h-5' />
+                            </Button>
+                            <div>
+                                <Divider orientation='vertical' className='bg-dark-3 w-[1px]' />
+                            </div>
+                            <Button variant={'ghost'} size={'icon'}>
 
-                            <Icons.trash className='h-5 w-5' />
-                        </Button>
-                    </CardContent>
-                </Card>
+                                <Icons.trash className='h-5 w-5' />
+                            </Button>
+                        </CardContent>
+                    </Card>
+                }
 
             </div>
             <Button variant={'outline'} className='regular-text-14-semibold text-purple-main w-full mt-11 border-dashed border-purple-main' >

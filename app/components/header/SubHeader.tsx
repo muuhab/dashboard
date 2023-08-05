@@ -13,9 +13,10 @@ interface SubHeaderProps {
     search?: string
     buttonTitle: string
     showView?: boolean
+    onClick?: () => void
 }
 
-const SubHeader: FC<SubHeaderProps> = ({ title, showView, buttonTitle, search }) => {
+const SubHeader: FC<SubHeaderProps> = ({ title, showView, buttonTitle, search, onClick }) => {
     return <div className='flex justify-between items-center'>
         <h3 className='text-2xl font-semibold leading-[48px] text-dark-main'>
             {title}
@@ -47,7 +48,7 @@ const SubHeader: FC<SubHeaderProps> = ({ title, showView, buttonTitle, search })
                 </Button>
             </div>
 
-            <Button className=' regular-text-14-semibold' >
+            <Button className=' regular-text-14-semibold' onClick={onClick} >
                 <Plus className='w-4 h-4' />
                 {buttonTitle}
             </Button>

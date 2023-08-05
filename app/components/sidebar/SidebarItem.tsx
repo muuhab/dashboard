@@ -51,8 +51,8 @@ const SidebarItemItem: FC<SidebarItemItemProps> = ({ label, href, icon: Icon, ac
 
             <ul className={clsx(!toggleMenu && 'hidden', toggleMenu && 'block')} >
                 {menu.map((item, index) => (
-                    <li key={index} className='pl-6 py-4 hover:bg-purple-light-main group'>
-                        <Link className='flex gap-4 items-center' href={item.href} >
+                    <li key={index} className='hover:bg-purple-light-main group'>
+                        <Link className='flex gap-4 items-center  pl-6 py-4 ' href={item.href} >
                             <span className='py-3 pl-3'>
                                 {item.icon}
                             </span>

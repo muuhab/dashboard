@@ -16,7 +16,7 @@ interface EditorProps {
 const Editor: FC<EditorProps> = ({ }) => {
 
     return <div className='min-h-[220px] bg-white  '><MDXEditor
-        markdown="Train hard. Stay dry. This soccer jacket is made of soft, sweat-wicking fabric that keeps you moving on the practice field. Stretch panels at the elbows and sides give you a full range of motion as you work."
+        markdown="Write your description here"
         contentEditableClassName="prose "
         onChange={(markdown) => console.log(markdown)}
     /></div>
