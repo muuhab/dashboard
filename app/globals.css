@@ -131,8 +131,14 @@ body {
   @apply  text-sm leading-5 font-normal;
 }
 
+.regular-text-16-medium {
+  @apply  text-base  font-medium;
+}
 .regular-text-16-semibold {
   @apply  text-base  font-semibold;
+}
+.regular-text-16-bold {
+  @apply  text-base  font-bold;
 }
 .regular-text-18-semibold {
   @apply  text-lg  font-semibold;

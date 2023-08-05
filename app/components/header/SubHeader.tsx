@@ -5,19 +5,33 @@ import { Button } from '../ui/Button'
 import { Plus } from 'lucide-react'
 import { Input } from '../ui/Input'
 import { Icons } from '../ui/Icons'
+import SelectSecondary from '../ui/Select/SelectSecondary'
+import ColorSelect from '../ui/Select/ColorSelect'
 
 interface SubHeaderProps {
     title: string
     search?: string
     buttonTitle: string
+    showView?: boolean
 }
 
-const SubHeader: FC<SubHeaderProps> = ({ title, buttonTitle, search }) => {
-    return <div className='flex justify-between items-baseline'>
+const SubHeader: FC<SubHeaderProps> = ({ title, showView, buttonTitle, search }) => {
+    return <div className='flex justify-between items-center'>
         <h3 className='text-2xl font-semibold leading-[48px] text-dark-main'>
             {title}
         </h3>
-        <div className="flex justify-center gap-3">
+        <div className="flex justify-center items-center gap-3">
+            {showView &&
+                <ColorSelect
+                    items={[
+                        { name: '', value: 'list' },
+                        { name: '', value: 'grid' },
+                    ]}
+                    icon={<Icons.viewModule />}
+                    defaultSelected='list'
+
+                />
+            }
             <div className='flex items-center justify-end shadow-box-shadow-input'>
 
                 <Input
