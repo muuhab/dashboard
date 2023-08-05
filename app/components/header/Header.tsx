@@ -16,9 +16,9 @@ const Header: FC<HeaderProps> = ({ }) => {
             </Command>
         </div>
         <div className='flex gap-4 items-center'>
-            <Button variant={'ghost'} size={'icon'} className='relative'>
+            <Button variant={'ghost'} size={'icon'} className='relative '>
                 <span className='bg-red-main rounded-full w-2 h-2 absolute right-1 top-1' />
-                <Icons.bell className='w-6 h-6' />
+                <Icons.bell className='w-6 h-6 fill-dark-2' />
             </Button>
             <Avatar>
                 <AvatarImage src='/images/logo.png' alt='avatar' className='w-8 h-8' />

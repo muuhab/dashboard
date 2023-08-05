@@ -30,6 +30,7 @@ import { formatNumber } from "@/app/lib/utils"
 import DataTablePagination from "@/app/components/table/pagination/DataTablePagination"
 import { Avatar } from "@/app/components/ui/Avatar"
 import { AvatarImage } from "@radix-ui/react-avatar"
+import Link from "next/link"
 
 const data: Product[] = [{
     "code": "203269437-9",
@@ -774,7 +775,11 @@ export const columns: ColumnDef<Product>[] = [
                         </DropdownMenuItem>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem>View customer</DropdownMenuItem>
-                        <DropdownMenuItem>View payment details</DropdownMenuItem>
+                        <DropdownMenuItem>
+                            <Link href={`/products/${payment.code}`}>
+                                View product details
+                            </Link>
+                        </DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
             )

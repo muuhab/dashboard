@@ -47,6 +47,7 @@
     --red-1:#FA699D;
     --red-3:#FC9FC0;
     --red-4:#FFBEBE;
+    --red-light-main:var(--light-fill-red-main-red, rgba(252, 52, 0, 0.10));
 
     --green-main: #20C9AC;
     --green-1: #14B13B;
@@ -110,16 +111,16 @@ body {
 
 
 .regular-text-14-semibold {
-  @apply text-dark-1 text-sm leading-5 font-semibold;
+  @apply  text-sm leading-5 font-semibold;
 }
 .regular-text-14-medium {
-  @apply text-dark-1 text-sm leading-5 font-medium;
+  @apply  text-sm leading-5 font-medium;
 }
 .regular-text-12-semibold {
-  @apply text-dark-main text-xs leading-[18px] font-semibold;
+  @apply text-xs leading-[18px] font-semibold;
 }
 .regular-text-12-medium {
-  @apply text-dark-main text-xs leading-[18px] font-medium;
+  @apply text-xs leading-[18px] font-medium;
 }
 
 
@@ -127,17 +128,44 @@ body {
   @apply  text-sm leading-5 font-medium;
 }
 .regular-text-14 {
-  @apply text-dark-2 text-sm leading-5 font-normal;
+  @apply  text-sm leading-5 font-normal;
 }
 
 .regular-text-16-semibold {
-  @apply text-dark-main text-base  font-semibold;
+  @apply  text-base  font-semibold;
+}
+.regular-text-18-semibold {
+  @apply  text-lg  font-semibold;
+}
+.regular-text-18-medium {
+  @apply  text-lg  font-medium;
 }
 
 .headline-4 {
-  @apply text-dark-main text-[36px] leading-[48px] font-semibold;
+  @apply  text-[36px] leading-[48px] font-semibold;
 }
 
 .headline-5-32-semibold {
-  @apply text-dark-main text-[32px] leading-[40px] font-semibold;
+  @apply  text-[32px] leading-[40px] font-semibold;
+}
+
+
+.form-1 {
+  border-radius: 4px;
+  border: 1px solid var(--form-11, #EBEAED);
+  background: var(--fill-white-white, #FFF);
+}
+
+
+
+
+
+
+.prose {
+  font-family: "Inter", sans-serif;
+  padding: 0px !important;
+}
+
+.prose strong {
+  font-weight: 600;
 }

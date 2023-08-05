@@ -33,7 +33,7 @@ const SubHeader: FC<SubHeaderProps> = ({ title, buttonTitle, search }) => {
                 </Button>
             </div>
 
-            <Button className='bg-purple-main !text-white flex gap-2 px-6 !py-3 regular-text-14-semibold' >
+            <Button className=' regular-text-14-semibold' >
                 <Plus className='w-4 h-4' />
                 {buttonTitle}
             </Button>
