@@ -241,5 +241,6 @@ module.exports = {
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms"),
     require("@headlessui/tailwindcss"),
+    require("@thoughtbot/tailwindcss-aria-attributes"),
   ],
 };

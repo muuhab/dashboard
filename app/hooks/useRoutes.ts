@@ -54,9 +54,25 @@ const useRoutes = () => {
       },
       {
         label: "Customers",
-        href: "/customers",
+        href: "#",
         icon: Icons.customer,
-        active: pathname === "/customers",
+        menu: [
+          {
+            label: "All Customers",
+            href: "/customers",
+            active: pathname === "/customers",
+          },
+          {
+            label: "Customer Details",
+            href: "/customers/details",
+            active: pathname === "/customers/details",
+          },
+          {
+            label: "Add Customer",
+            href: "/customers/add",
+            active: pathname === "/customers/add",
+          },
+        ],
       },
       {
         label: "Mange Reviews",

@@ -11,3 +11,14 @@ export type Order = {
   method: string;
   price: number;
 };
+
+export type Customer = {
+  id?: string;
+  name: string;
+  email: string;
+  img?: string;
+  from: string;
+  orders: number;
+  change: number;
+  spending: number;
+};
