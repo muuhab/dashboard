@@ -51,6 +51,9 @@ module.exports = {
           1: "var(--green-1)",
           2: "var(--green-2)",
           3: "var(--green-3)",
+          light: {
+            main: "var(--green-light-main)",
+          },
         },
         yellow: {
           main: "var(--yellow-main)",

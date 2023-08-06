@@ -141,7 +141,7 @@ const columns: ColumnDef<Order & { index: string }>[] = [
                         <DropdownMenuContent align="end">
                             <DropdownMenuLabel>Actions</DropdownMenuLabel>
                             <DropdownMenuItem
-                                onClick={() => navigator.clipboard.writeText(payment.id)}
+                                onClick={() => navigator.clipboard.writeText(payment.id!)}
                             >
                                 Copy payment ID
                             </DropdownMenuItem>

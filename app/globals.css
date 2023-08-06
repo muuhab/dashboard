@@ -53,6 +53,8 @@
     --green-1: #14B13B;
     --green-2: #5ED8C3;
     --green-3: #94E5D8;
+    --green-light-main:var(--light-fill-green-main, rgba(32, 201, 172, 0.10));
+
 
     --yellow-main: #FFA15F;
     --yellow-1: #FFDFC0;
@@ -121,6 +123,9 @@ body {
 }
 .regular-text-12-medium {
   @apply text-xs leading-[18px] font-medium;
+}
+.regular-text-12 {
+  @apply text-xs leading-[18px] font-normal;
 }
 
 

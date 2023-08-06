@@ -47,8 +47,8 @@ const useRoutes = () => {
           },
           {
             label: "Order Details",
-            href: "/order/details",
-            active: pathname === "/order/details",
+            href: "/orders/details",
+            active: pathname === "/orders/details",
           },
         ],
       },
