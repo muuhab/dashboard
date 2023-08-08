@@ -2,12 +2,14 @@ import { cn } from '@/app/lib/utils'
 import { FC } from 'react'
 
 interface ContactCardProps {
-    icon: any
+    icon?: any
     iconColor?: string
     title: string
     subtitle: string
     secondary?: boolean
     border?: boolean
+    size?: 'small' | 'medium' | 'large'
+    children?: any
 }
 
 const ContactCard: FC<ContactCardProps> = ({
@@ -16,21 +18,34 @@ const ContactCard: FC<ContactCardProps> = ({
     iconColor,
     subtitle,
     secondary,
-    border = true
+    size = 'medium',
+    border = true,
+    children
 
 }) => {
     return <div className="flex gap-3 items-center ">
         {
-            !border ?
-                <Icon className={
-                    cn('w-8 h-8 ', iconColor && `[&>*]:fill-${iconColor} `)
-                } />
-                :
-                <span className='bg-white border-dark-5 border rounded-full p-1 w-8 h-8 flex justify-center items-center'>
+            children ? children :
+                !border ?
                     <Icon className={
-                        cn('w-4 h-4 ', iconColor && `[&>*]:fill-${iconColor} `)
+                        cn(
+                            size === 'medium' && 'w-8 h-8 ',
+                            size === 'large' && 'w-10 h-10 ',
+                            iconColor && `[&>*]:fill-${iconColor} `
+                        )
                     } />
-                </span>
+                    :
+                    <span className={cn(
+                        'bg-white border-dark-5 border rounded-full flex justify-center items-center'
+                        ,
+                        size === 'medium' && 'w-8 h-8 p-1 ',
+                        size === 'large' && 'w-10 h-10 p-2.5  ')}>
+                        <Icon className={
+                            cn(
+                                'w-8 h-8 '
+                                , iconColor && `[&>*]:fill-${iconColor} `)
+                        } />
+                    </span>
         }
         <div className="flex flex-col ">
 

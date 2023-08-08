@@ -151,6 +151,9 @@ body {
 .regular-text-18-medium {
   @apply  text-lg  font-medium;
 }
+.regular-text-18-bold {
+  @apply  text-lg  font-bold;
+}
 
 .headline-4 {
   @apply  text-[36px] leading-[48px] font-semibold;

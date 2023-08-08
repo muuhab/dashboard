@@ -1,17 +1,13 @@
 import { cn } from '@/app/lib/utils'
+import { BreadcrumbItemType } from '@/app/types/global'
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Text } from '@chakra-ui/react'
 import Link from 'next/link'
 import { FC } from 'react'
 
 
-type BreadcrumbItem = {
-    name: string
-    href?: string
-    current?: boolean
-}
 
 interface BreadCrumbMainProps {
-    items: BreadcrumbItem[]
+    items: BreadcrumbItemType[]
 }
 
 const BreadCrumbMain: FC<BreadCrumbMainProps> = ({

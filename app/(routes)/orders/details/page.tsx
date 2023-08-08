@@ -8,24 +8,16 @@ import UserAvatar from '@/app/components/ui/Avatar/UserAvatar'
 import { Button } from '@/app/components/ui/Button'
 import { Icons } from '@/app/components/ui/Icons'
 import { Divider } from '@chakra-ui/react'
-import ContactCard from './components/ContactCard'
+import ContactCard from '../../../components/Contact/ContactCard'
 import { MapPin } from 'lucide-react'
+import ContactCardHeader from '@/app/components/Contact/ContactCardHeader'
 
 interface pageProps {
 
 }
 
 
-const ContactCardHeader = ({ title }: { title: string }) => {
-    return <div className="flex justify-between">
-        <span className='regular-text-14-semibold text-dark-main'>{title}</span>
-        <span className="flex items-center">
 
-            <span className='regular-text-14-medium text-purple-main'>Edit Info  </span>
-            <Icons.arrowDown className='-rotate-90 [&>*]:fill-purple-main w-4 h-4' />
-        </span>
-    </div>
-}
 
 const page: FC<pageProps> = ({ }) => {
     return <div className=' flex flex-col gap-6'>
@@ -34,6 +26,18 @@ const page: FC<pageProps> = ({ }) => {
             <SubHeaderSecondary
                 buttonTitle='Edit Order'
                 title='Order #27839-00'
+                items={[
+                    {
+                        name: 'Orders',
+                        href: '/orders',
+                        current: false
+                    },
+                    {
+                        name: 'Order Details',
+                        href: '/orders/details',
+                        current: true
+                    }
+                ]}
             />
         </div>
         <div className="flex justify-between  ">

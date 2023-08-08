@@ -1,40 +1,25 @@
 "use client"
 
+import { BreadcrumbItemType } from '@/app/types/global'
 import { FC } from 'react'
-import { Button } from '../ui/Button'
-import { Plus } from 'lucide-react'
-import { Input } from '../ui/Input'
-import { Icons } from '../ui/Icons'
-import SelectSecondary from '../ui/Select/SelectSecondary'
-import ColorSelect from '../ui/Select/ColorSelect'
-import ViewSelect from '../ui/Select/ViewSelect'
 import BreadCrumbMain from '../ui/BreadCrumb/BreadCrumbMain'
-import Breadcrumb from '../ui/Breadcrumb'
+import { Button } from '../ui/Button'
+import { Icons } from '../ui/Icons'
 
 interface SubHeaderSecondaryProps {
     title: string
-    buttonTitle: string
+    buttonTitle?: string
     showView?: boolean
     onClick?: () => void,
+    items: BreadcrumbItemType[]
     children?: React.ReactNode
 }
 
-const SubHeaderSecondary: FC<SubHeaderSecondaryProps> = ({ title, buttonTitle, onClick, children }) => {
+const SubHeaderSecondary: FC<SubHeaderSecondaryProps> = ({ title, items, buttonTitle, onClick, children }) => {
     return <div className='flex justify-between items-center'>
         <div className="flex flex-col gap1">
             <BreadCrumbMain
-                items={[
-                    {
-                        name: 'Orders',
-                        href: '/orders',
-                        current: false
-                    },
-                    {
-                        name: 'Order Details',
-                        href: '/orders/details',
-                        current: true
-                    }
-                ]}
+                items={items}
             />
             <h3 className='text-2xl font-semibold leading-[48px] text-dark-main'>
                 {title}

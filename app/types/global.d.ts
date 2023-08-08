@@ -2,6 +2,12 @@ export type Currency = "USD" | "EUR" | "EGP";
 
 export type NumberFormatStyle = "currency" | "decimal" | "percent";
 
+type BreadcrumbItemType = {
+  name: string;
+  href?: string;
+  current?: boolean;
+};
+
 export type Order = {
   id?: string;
   customerName: string;

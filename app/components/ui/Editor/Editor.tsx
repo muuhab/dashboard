@@ -9,13 +9,13 @@ const MDXEditor = dynamic(
     { ssr: false }
 )
 
-interface EditorProps {
+interface EditorProps extends React.HTMLAttributes<HTMLDivElement> {
 
 }
 
-const Editor: FC<EditorProps> = ({ }) => {
+const Editor: FC<EditorProps> = ({ ...props }) => {
 
-    return <div className='min-h-[220px] bg-white  '><MDXEditor
+    return <div className='min-h-[220px] bg-white  ' {...props}><MDXEditor
         markdown="Write your description here"
         contentEditableClassName="prose "
         onChange={(markdown) => console.log(markdown)}
